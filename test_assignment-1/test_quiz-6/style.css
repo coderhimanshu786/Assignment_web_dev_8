@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  block-size: border-box;
+}
+body {
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20211110/pngtree-square-box-blue-abstract-background-image_915429.png);
+  background-size: cover;
+  height: 100%;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 30vh auto;
+  font-size: 60px;
+  font-family: "Roboto", sans-serif;
+}
+#openModalBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -25vh auto;
+  width: 160px;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #64bed4;
+  margin: 10% auto;
+  padding: 50px;
+  border-radius: 5px;
+  width: 60%;
+  max-width: 800px;
+  min-height: 500px;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.close {
+  color: #1e1e1e;
+  float: right;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+}

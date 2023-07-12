@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Text App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    body {
+      background-image: url(https://static.vecteezy.com/system/resources/previews/001/984/861/original/abstract-blue-geometric-circles-overlapping-background-with-light-blue-free-vector.jpg);
+      background-position: 100%;
+    }
+
+    .input-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30vh auto;
+      width: 800px;
+      height: 500px;
+      border: 1px solid rgb(138, 209, 232);
+      font-size: 25px;
+      box-shadow: 0.5rem 0.5rem rgb(3, 209, 224), -0.5rem -0.5rem #ccc;
+    }
+
+    #input-box {
+      margin: -350px 0px 8px 10px;
+      width: 500px;
+      padding: 10px;
+      font-size: 20px;
+      background-color: rgb(231, 229, 229);
+      border: none;
+    }
+
+    button {
+      margin: -350px 0px 8px 10px;
+      padding: 10px;
+      font-size: 20px;
+      width: 150px;
+      background-color: chartreuse;
+    }
+
+    #output {
+      position: absolute;
+      top: 50vh;
+      padding: 20px;
+      width: 600px;
+      height: 320px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="input-text">
+    <input id="input-box" type="text" placeholder="Input Here">
+    <button onclick="addText()">Submit</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function addText() {
+      let input = document.getElementById('input-box');
+      let text = input.value;
+      let output = document.getElementById('output');
+      let newParagraph = document.createElement('p');
+      newParagraph.textContent = text;
+      output.appendChild(newParagraph);
+      input.value = '';
+    }
+  </script>
+</body>
+
+</html>
